@@ -9,7 +9,7 @@
 //#########################################################
 
 #include <Adafruit_NeoPixel.h>
-#define PIN 6
+#define PIN 12
 
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = pin number (most are valid)
@@ -19,7 +19,7 @@
 //   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(4, 12, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(4, PIN, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   strip.begin();
@@ -33,21 +33,21 @@ void loop() {
   strip.setPixelColor(2, 255, 0, 0);
   strip.setPixelColor(3, 255, 0, 0);
   strip.show();
-  delay(50);
+  delay(75);
 //Flash Strobe - All White
   strip.setPixelColor(0, 255, 255, 255);
   strip.setPixelColor(1, 255, 255, 255);
   strip.setPixelColor(2, 255, 255, 255);
   strip.setPixelColor(3, 255, 255, 255);
   strip.show();
-  delay(50);
+  delay(75);
 //Set Nav lights - Red/Green
   strip.setPixelColor(0, 0, 255, 0);
   strip.setPixelColor(1, 0, 255, 0);
   strip.setPixelColor(2, 255, 0, 0);
   strip.setPixelColor(3, 255, 0, 0);
   strip.show();
-  delay(50);
+  delay(75);
 //Flash Strobe - All White
   strip.setPixelColor(0, 255, 255, 255);
   strip.setPixelColor(1, 255, 255, 255);
@@ -55,7 +55,7 @@ void loop() {
   strip.setPixelColor(3, 255, 255, 255);
   strip.show();
 //Set Nav lights - Red/Green
-  delay(50);
+  delay(75);
   strip.setPixelColor(0, 0, 255, 0);
   strip.setPixelColor(1, 0, 255, 0);
   strip.setPixelColor(2, 255, 0, 0);
